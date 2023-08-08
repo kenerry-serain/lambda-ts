@@ -28,7 +28,8 @@ jobs:
         run: sam build --template template.yaml
 
       - name: Deploy 
-        run: sam deploy \
+        run: |
+            sam deploy \
             --resolve-s3 \
             --no-confirm-changeset \ 
             --no-fail-on-empty-changeset \
