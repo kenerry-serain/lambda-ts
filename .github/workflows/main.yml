@@ -24,10 +24,11 @@ jobs:
       - name: Npm Install
         run: npm ci
 
-      - name: Build and Deploy
-        run: |
-          sam build --template template.yaml &&
-          sam deploy \
+      - name: Build 
+        run: sam build --template template.yaml
+
+      - name: Deploy 
+        run: sam deploy \
             --resolve-s3 \
             --no-confirm-changeset \ 
             --no-fail-on-empty-changeset \
