@@ -3,7 +3,7 @@ name: Lambda Pipeline
 on: 
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deployLambda:
