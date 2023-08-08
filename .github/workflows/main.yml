@@ -30,6 +30,7 @@ jobs:
       - name: Deploy 
         run: |
             sam deploy \
+              --template-file .aws-sam/build/template.yaml \
               --resolve-s3 \
               --no-confirm-changeset \ 
               --no-fail-on-empty-changeset \
