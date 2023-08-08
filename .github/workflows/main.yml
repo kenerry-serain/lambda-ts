@@ -26,9 +26,8 @@ jobs:
 
       - name: Build and Deploy
         run: |
-          sam build --template template.yaml
-          sam deploy 
-            --stack-name lambda-youtube \
+          sam build --template template.yaml &&
+          sam deploy \
             --resolve-s3 \
             --no-confirm-changeset \ 
             --no-fail-on-empty-changeset \
